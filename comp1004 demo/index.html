@@ -15,22 +15,22 @@
     <nav>
         <ul class="sidebar">
             <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Research</a></li>
-            <li><a href="#">Build Your Plan</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#home">About Us</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#plan">Build Your Plan</a></li>
+            <li><a href="#contactUs">Contact Us</a></li>
             
         </ul>
         <ul>
-            <li><a href="#">Vital Plan</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Research</a></li>
-            <li><a href="#">Build Your Plan</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#home">Vital Plan</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#plan">Build Your Plan</a></li>
+            <li><a href="#contactUs">Contact Us</a></li>
             <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
     
-    <div class = "Homescreentext">
+    <div class = "Homescreentext" id = "home">
         <h1>Welcome to VitalPlan!!</h1>
         <p>The website which allows you to seemlessely plan your day around your most important tasks 
             whilst also allowing you to stay healthy! Please scroll to navigate the various screens 
@@ -58,7 +58,7 @@
         <p> </p>
     </div>
 
-    <div class = "Screen4">
+    <div class = "Screen4" id = "plan">
         <h1> Build Your Plan </h1> 
 
         <input id="myAge" placeholder="Input your age">
@@ -77,9 +77,12 @@
             <button id="Leisure">Leisure</button>
             <button id="Work">Work</button><br>
 
-            <button id="activityButtton">Enter</button>
+            <button id="activityButton">Enter</button>
 
-            <ul id="activityList"></ul>
+            <ul id="activityList">
+                <p> </p>
+
+            </ul>
 
         </div>
 
