@@ -76,3 +76,28 @@ document.getElementById("other").onclick = function(){
 }
 
 
+const list1 = document.getElementById("activity");
+const activityButton = document.getElementById("activityButton");
+const out1 = document.getElementById("activityList");
+
+function fun1() {
+    const activityValue = list1.value;
+
+    const listItem = document.createElement("li");
+    listItem.textContent = activityValue;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Complete";
+    deleteButton.addEventListener("click", function() {
+        out1.removeChild(listItem);
+    });
+
+    listItem.appendChild(deleteButton);
+
+    out1.appendChild(listItem);
+
+    list1.value = '';
+}
+
+activityButton.addEventListener("click", fun1);
+
