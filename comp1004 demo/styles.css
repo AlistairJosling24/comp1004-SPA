@@ -17,6 +17,9 @@ body {
 nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    z-index:1000;
+    position:sticky;
+
 }
 
 nav ul {
@@ -25,6 +28,7 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position:sticky;
 }
 
 nav li {
@@ -162,12 +166,11 @@ label {
 .InputActivity {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px; 
+    align-items: center; 
     border: none;
     border-radius: 8px;
     flex-wrap: wrap;        
-    margin: 0;
+    margin-top:-100px;
 }
 
 
@@ -185,8 +188,32 @@ label {
     width: 120px;
 }
 
+#activityList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 2px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: black;
 
+}
 
+#activityList li{
+    font-family:"Permanent Marker", cursive; ;
+    display:flex;
+    border: 1px black;
+    padding:5px;
+    margin-bottom:5px;
+    border-radius: 8px;
+    background-color: white;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 .Screen5 {
     height: 100vh;
@@ -194,6 +221,6 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content:center;
     color: white;
 }
-
