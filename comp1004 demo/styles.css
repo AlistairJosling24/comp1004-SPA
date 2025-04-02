@@ -1,6 +1,7 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -12,21 +13,25 @@ body {
     background-position: center;
     position: relative;
 }
-nav{
+
+nav {
     background-color: white;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.1); 
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-nav ul{
+
+nav ul {
     width: 100%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-nav li{
+
+nav li {
     height: 50px;
 }
-nav a{
+
+nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -34,56 +39,161 @@ nav a{
     align-items: center;
     color: black;
 }
-nav a:hover{
-    background-color:#f0f0f0
+
+nav a:hover {
+    background-color: #f0f0f0;
 }
-nav li:first-child{
+
+nav li:first-child {
     margin-right: auto;
 }
-.sidebar{
+
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 250px;
-    z-index:999;
+    z-index: 999;
     background-color: rgba(255, 255, 255, 0.141);
     backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
-.sidebar li{
-    width: 100%
+
+.sidebar li {
+    width: 100%;
 }
-.sidebar a{
-    width: 100%
+
+.sidebar a {
+    width: 100%;
 }
 
 .Homescreentext {
+    background-image: url(Image4.jpg);
     color: white;
-    position: absolute;
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-style: normal;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
-    padding-left: 10px;
 }
 
-.Homescreentext h1 {
-    position: absolute;
-    top: 120px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
+.Homescreentext h1 
 .Homescreentext p {
-    position: absolute;
-    top: 180px;
-    left: 10px; 
-    width: calc(100% - 20px);
-    text-align: left; 
-        }
+    margin: 10px;
+}
+
+.Screen2 {
+    background-color: black;
+    color: white;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+    align-items: flex-start;
+}
+
+
+.Screen2 h1{
+    margin: 10px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.Screen2 p{
+    font-size: 18px;
+    margin: 10px;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+.Screen3 {
+    height: 100vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.Screen4 {
+    height: 100vh;
+    background-color: rgba(36, 25, 30, 0.424);
+    color: purple
+    
+}
+.Screen4 h1{
+    font-family:"Permanent Marker", cursive;
+    min-height:20vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #f0f0f0;
+    border: none;
+    font-weight: bold;
+    
+}
+
+#myAge {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 100px;
+    height: 20px;
+}
+.InputActivity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    border: none;
+    border-radius: 8px;
+    flex-wrap: wrap;        
+    margin: 0;
+}
+
+
+.InputActivity input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 200px; 
+}
+
+.InputActivity button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 120px;
+}
+
+
+
+
+.Screen5 {
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
