@@ -200,7 +200,9 @@ label {
     flex-wrap: wrap;        
     margin-top:-100px;
 }
-
+.InputActivity .Activityanswer button{
+    display: none;
+}
 
 .InputActivity input {
     padding: 10px;
@@ -230,7 +232,7 @@ label {
 }
 
 #activityList li{
-    font-family:"Permanent Marker", cursive; ;
+    font-family:"Permanent Marker", cursive; 
     display:flex;
     border: 1px black;
     padding:5px;
@@ -242,4 +244,9 @@ label {
     justify-content: center;
     align-items: center;
 }
+
+#comments li{
+    font-family:"Permenant Marker", cursive;
+}
+
 
