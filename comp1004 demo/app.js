@@ -237,6 +237,9 @@ document.getElementById("finish").onclick = function() {
         button.style.display = 'none';
     });
 
+    Restart = document.getElementById("Restart");
+    Restart.style.display = "block"
+
     CompleteButtons.forEach(function(button){
         button.style.display = 'block';
         button.textContent = 'Complete';
@@ -316,20 +319,42 @@ document.getElementById("finish").onclick = function() {
     
         Comments1.innerHTML = comment;
     }
-    
-
-
-
-
-
-
-
-
-
-    
-
-
 };
+document.getElementById("Restart").onclick = function() {
+    Comments1.innerHTML = " ";
+
+    ExerciseHours = 0;
+    Workhours = 0;
+    Leisurehours = 0;
+
+    Recex = 0;
+    Recwo = 0;
+    Reclei = 0;
+
+    const buttons = document.querySelectorAll('.Screen4 .InputActivity button');
+    const inputs = document.querySelectorAll('.Screen4 input');
+
+    inputs.forEach(function(input){
+        input.style.display = 'flex';
+    });
+
+    buttons.forEach(function(button) {
+        button.style.display = 'block';
+    });
+
+    while (out1.children.length > 1) {
+        out1.removeChild(out1.lastChild);
+    }
+
+    const Restart = document.getElementById("Restart");
+    Restart.style.display = "none";
+}
+
+
+
+
+
+
 
 
 
