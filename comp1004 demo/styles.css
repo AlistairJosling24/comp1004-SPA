@@ -247,9 +247,7 @@ label {
     justify-content: center;
     align-items: center;
 }
-#placeholder {
-    display: none;
-}
+
 
 #comments li{
     font-family:"Permenant Marker", cursive;
