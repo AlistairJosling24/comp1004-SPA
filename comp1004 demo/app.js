@@ -139,49 +139,64 @@ document.getElementById("Hours").onclick = function(){
 
 function fun1() {
     const activityValue = list1.value;
-
+    
     const listItem = document.createElement("li");
     listItem.textContent = activityValue;
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
-    deleteButton.addEventListener("click", function() {
-        out1.removeChild(listItem);
-        if(exercise_type == "Exercise"){  
+    
+    const priorityButton = document.createElement("button");
+    priorityButton.textContent = "Low";
+    priorityButton.style.backgroundColor = 'green';
 
-            Recex -= ExerciseHours;
-            
-            console.log("Total Exercise Time (mins):", Recex);
-            
-        
-            console.log(Recex)
-        } else if(exercise_type == "Work"){
-            Recwo -= Workhours;
-            
-            console.log("Total work Time (mins):", Recwo);
-            
-        
-            console.log(Recwo)
-    
-        }else if(exercise_type == "Leisure"){
-            Reclei -= Leisurehours;
-            
-            console.log("Total Exercise Time (mins):", Reclei);
-            
-        
-            console.log(Reclei)
-            
-            console.log("Total Leisure Time (mins):", Reclei);
-    
+    let prioritynumber = 1;
+
+    priorityButton.addEventListener("click", function() {
+        prioritynumber = prioritynumber + 1;
+        if(prioritynumber == 1){
+            priorityButton.style.backgroundColor = 'green';
+            priorityButton.textContent = "Low";
+        }else if(prioritynumber == 2){
+            priorityButton.style.backgroundColor = 'orange';
+            priorityButton.textContent = "Medium";
+        }else if(prioritynumber == 3){
+            priorityButton.style.backgroundColor = 'red';
+            priorityButton.textContent = "High";
+        }else if(prioritynumber > 3){
+            prioritynumber = 1;
+            priorityButton.style.backgroundColor = 'green';
+            priorityButton.textContent = "Low";
         }
     
+    })
 
+
+
+
+
+    deleteButton.addEventListener("click", function() {
+        out1.removeChild(listItem);
+        
+        if(exercise_type == "Exercise"){  
+            Recex -= ExerciseHours;
+            console.log("Total Exercise Time (mins):", Recex);
+            console.log(Recex);
+        } else if(exercise_type == "Work") {
+            Recwo -= Workhours;
+            console.log("Total work Time (mins):", Recwo);
+            console.log(Recwo);
+        } else if(exercise_type == "Leisure") {
+            Reclei -= Leisurehours;
+            console.log("Total Exercise Time (mins):", Reclei);
+            console.log(Reclei);
+            console.log("Total Leisure Time (mins):", Reclei);
+        }
     });
 
     listItem.appendChild(deleteButton);
-
+    listItem.appendChild(priorityButton);
     out1.appendChild(listItem);
-
     list1.value = '';
 
     console.log(exercise_type);
@@ -194,10 +209,8 @@ function fun1() {
         Recex += ExerciseHours;
         
         console.log("Total Exercise Time (mins):", Recex);
-        
-    
-        console.log(Recex)
-    } else if(exercise_type == "Work"){
+        console.log(Recex);
+    } else if(exercise_type == "Work") {
         let hours = parseInt(document.getElementById("Hours").value) || 0;
         let minutes = parseInt(document.getElementById("Minutes").value) || 0;
         
@@ -205,8 +218,7 @@ function fun1() {
         Recwo += Workhours;
         
         console.log("Total Work Time (mins):", Recwo);
-
-    }else if(exercise_type == "Leisure"){
+    } else if(exercise_type == "Leisure") {
         let hours = parseInt(document.getElementById("Hours").value) || 0;
         let minutes = parseInt(document.getElementById("Minutes").value) || 0;
         
@@ -214,14 +226,7 @@ function fun1() {
         Reclei += Leisurehours;
         
         console.log("Total Leisure Time (mins):", Reclei);
-
     }
-
-
-
-
-    
-
 }
 
 document.getElementById("finish").onclick = function() {
@@ -319,6 +324,7 @@ document.getElementById("finish").onclick = function() {
     
         Comments1.innerHTML = comment;
     }
+
 };
 document.getElementById("Restart").onclick = function() {
     Comments1.innerHTML = " ";
@@ -342,15 +348,11 @@ document.getElementById("Restart").onclick = function() {
         button.style.display = 'block';
     });
 
-    while (out1.children.length > 1) {
-        out1.removeChild(out1.lastChild);
-    }
+    out1.innerHTML = '<p></p>';
 
     const Restart = document.getElementById("Restart");
     Restart.style.display = "none";
 }
-
-
 
 
 
