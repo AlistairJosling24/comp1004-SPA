@@ -253,4 +253,19 @@ label {
     font-family:"Permenant Marker", cursive;
 }
 
+#Comments1{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: none;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+
 
