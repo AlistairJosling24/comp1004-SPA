@@ -230,6 +230,7 @@ function fun1() {
 }
 
 document.getElementById("finish").onclick = function() {
+    let age = parseInt(document.getElementById("myAge").value) || 0;
     const buttons = document.querySelectorAll('.Screen4 .InputActivity button');
     const inputs = document.querySelectorAll('.Screen4 input');
     const CompleteButtons = document.querySelectorAll('#activityList button');
@@ -242,90 +243,74 @@ document.getElementById("finish").onclick = function() {
         button.style.display = 'none';
     });
 
-    Restart = document.getElementById("Restart");
+    let Restart = document.getElementById("Restart");
     Restart.style.display = "block"
 
     CompleteButtons.forEach(function(button){
         button.style.display = 'block';
         button.textContent = 'Complete';
-    })
+    });
+
+    let CommentBackground = document.getElementById('Comments1');
+    CommentBackground.style.backgroundColor = "green"; 
+    CommentBackground.style.display = "block";
+
+    let comment = "";
 
     if(age > 17){
-        let comment = "";
-    
         if(Recex < 30){
             comment += "Adults aged 18 and over require at least 30 minutes of activity a day to reamin healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 660){
             comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
         }
-    
-        Comments1.innerHTML = comment;
     }
-    
-    if( 5 < age < 7 ){
-        let comment = "";
-    
+
+    if(age > 5 && age < 7){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 180){
             comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
         }
-    
-        Comments1.innerHTML = comment;
     }
 
-    if( 0 <= age < 5 ){
-        let comment = "";
-    
+    if(age >= 0 && age < 5){
         if(Recex < 180){
             comment += "Children aged 0 - 4 require at least 180 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
-        Comments1.innerHTML = comment;
     }
 
-    
-    if( 8 < age < 11 ){
-        let comment = "";
-    
+    if(age > 8 && age < 11){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 240){
             comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
         }
-    
-        Comments1.innerHTML = comment;
     }
 
-    if( 12 < age < 14 ){
-        let comment = "";
-    
+    if(age > 12 && age < 14){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 360){
             comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
         }
-    
-        Comments1.innerHTML = comment;
     }
 
-    if( 15 < age < 17 ){
-        let comment = "";
-    
+    if(age > 14 && age < 18){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 480){
             comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
         }
-    
-        Comments1.innerHTML = comment;
     }
 
+    CommentBackground.innerHTML = comment;
 };
+
 document.getElementById("Restart").onclick = function() {
     Comments1.innerHTML = " ";
 
@@ -352,9 +337,11 @@ document.getElementById("Restart").onclick = function() {
 
     const Restart = document.getElementById("Restart");
     Restart.style.display = "none";
+
+    CommentBackground = document.getElementById('Comments1');
+    CommentBackground.style.backgroundColor = "none"; 
+    CommentBackground.style.display = "none";
 }
-
-
 
 
 
