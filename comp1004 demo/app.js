@@ -343,6 +343,17 @@ document.getElementById("Restart").onclick = function() {
     CommentBackground.style.display = "none";
 }
 
+function sendMail(){
+    let parms = {
+        name : document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    }
+
+    emailjs.send("service_5qcof2k", "template_shqrs6i",parms).then(alert("Email Sent!"))
+}
+
 
 
 
