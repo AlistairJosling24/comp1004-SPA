@@ -343,19 +343,27 @@ document.getElementById("Restart").onclick = function() {
     CommentBackground.style.display = "none";
 }
 
-function sendMail(){
+function sendMail(event) {
+    event.preventDefault();
+
     let parms = {
-        name : document.getElementById("name").value,
+        name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         subject: document.getElementById("subject").value,
         message: document.getElementById("message").value,
-    }
+    };
 
-    emailjs.send("service_5qcof2k", "template_shqrs6i",parms).then(alert("Email Sent!"))
+
+    emailjs.send("service_5qcof2k", "template_shqrs6i", parms)
+        .then(function(response) {
+            alert("Email sent successfully!");
+            console.log("SUCCESS", response.status, response.text);
+            document.querySelector("form").reset();
+        }, function(error) {
+            alert("Failed to send email. Please try again later.");
+            console.log("FAILED", error);
+        });
 }
-
-
-
 
 
 
