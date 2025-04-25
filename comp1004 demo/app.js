@@ -266,12 +266,12 @@ document.getElementById("finish").onclick = function() {
         }
     }
 
-    if(age > 5 && age < 7){
+    if(age >= 4 && age < 8){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 180){
-            comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
+            comment += "You are doing excessive amounts of work, children aged 5 - 7 are recommended a maximum of 3 hours of work per day. If possible consider spreading out the workload or consider taking appropriate breaks.";
         }
     }
 
@@ -281,30 +281,30 @@ document.getElementById("finish").onclick = function() {
         }
     }
 
-    if(age > 8 && age < 11){
+    if(age > 7 && age < 12){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 240){
-            comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
+            comment += "You are doing excessive amounts of work,  children aged 8 - 11 are recommended a maximum of 4 hours of work per day. If possible consider spreading out the workload or consider taking appropriate breaks.";
         }
     }
 
-    if(age > 12 && age < 14){
+    if(age > 11 && age <= 14){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 360){
-            comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
+            comment += "You are doing excessive amounts of work,  children aged 12 - 14 are recommended a maximum of 6 hours of work per day. If possible consider spreading out the workload or consider taking appropriate breaks.";
         }
     }
 
-    if(age > 14 && age < 18){
+    if(age >= 15 && age < 18){
         if(Recex < 60){
             comment += "Children aged 5 - 17 require at least 60 minutes of activity a day to remain healthy, consider fitting some more physical exercise into your day. ";
         }
         if(Recwo > 480){
-            comment += "You are doing excessive amounts of work, if possible consider spreading out the workload or consider taking appropriate breaks.";
+            comment += "You are doing excessive amounts of work,  children aged 15 - 17 are recommended a maximum of 8 hours of work per day. If possible consider spreading out the workload or consider taking appropriate breaks.";
         }
     }
 
@@ -364,6 +364,5 @@ function sendMail(event) {
             console.log("FAILED", error);
         });
 }
-
 
 
