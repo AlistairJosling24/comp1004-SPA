@@ -234,6 +234,7 @@ document.getElementById("finish").onclick = function() {
     const buttons = document.querySelectorAll('.Screen4 .InputActivity button');
     const inputs = document.querySelectorAll('.Screen4 input');
     const CompleteButtons = document.querySelectorAll('#activityList button');
+    const listItems = document.querySelectorAll('#activityList li');
 
     inputs.forEach(function(input){
         input.style.display = 'none';
@@ -246,11 +247,29 @@ document.getElementById("finish").onclick = function() {
     let Restart = document.getElementById("Restart");
     Restart.style.display = "block"
 
-    CompleteButtons.forEach(function(button){
+
+    CompleteButtons.forEach(function(button) {
         button.style.display = 'block';
         button.textContent = 'Complete';
     });
-
+    
+    
+    listItems.forEach(function(item) {
+        const buttons = item.querySelectorAll('button');
+        if (buttons.length > 1) {
+            const priorityButton = buttons[1];
+            const currentPriority = priorityButton.style.backgroundColor;
+    
+            if (currentPriority === 'green') {
+                priorityButton.textContent = 'Low';
+            } else if (currentPriority === 'orange') {
+                priorityButton.textContent = 'Medium';
+            } else if (currentPriority === 'red') {
+                priorityButton.textContent = 'High';
+            }
+        }
+    });
+    
     let CommentBackground = document.getElementById('Comments1');
     CommentBackground.style.backgroundColor = "green"; 
     CommentBackground.style.display = "block";
